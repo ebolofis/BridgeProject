@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A7C378A-A1F9-4A85-80A1-785FBD0AAE83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HitServicesTest</RootNamespace>
+    <AssemblyName>HitServicesTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.1\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="HitServicesM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HitServices_Models\bin\Debug\HitServicesM.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CorissiaAPI\CorissiaAPITest.cs" />
+    <Compile Include="DAOs\ProtelDAOTest.cs" />
+    <Compile Include="Forex\FixerJobTest.cs" />
+    <Compile Include="Forky\WebCallsTest.cs" />
+    <Compile Include="Helpers\ApiClientHelperTest.cs" />
+    <Compile Include="Helpers\EmailHelperTests.cs" />
+    <Compile Include="Helpers\FileHelpersTests.cs" />
+    <Compile Include="Helpers\SaveDataToDBHelpersTest.cs" />
+    <Compile Include="Helpers\SettingsHelperTest.cs" />
+    <Compile Include="Iberostar\SendReservationsTest.cs" />
+    <Compile Include="MainTest.cs" />
+    <Compile Include="Singular\FuelImportTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtelAvailabilityTAAPI\ProtelAvailabilityTest.cs" />
+    <Compile Include="ProtelRateCodes\ProtelRateCodesTests.cs" />
+    <Compile Include="SmartIn\Flow\SmartInFlowTest.cs" />
+    <Compile Include="SQL\Jobs\ExportDataJobTest.cs" />
+    <Compile Include="SQL\Jobs\ReadFromCsvJobTest.cs" />
+    <Compile Include="SQL\Jobs\RunScriptJobTest.cs" />
+    <Compile Include="SQL\Jobs\SaveToTableJobTest.cs" />
+    <Compile Include="SQL\Jobs\UnitTest1.cs" />
+    <Compile Include="WaterPark\OnlineReservationTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ExternalFiles\CorissiaAPISettings.ini" />
+    <None Include="ExternalFiles\ProtelAvailabilitySettings.ini" />
+    <None Include="ExternalFiles\ProtelRateCodesSettings.ini" />
+    <None Include="ExternalFiles\PylonBridgeAPISettings.ini" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncryptDecrypt\PylonBridge_Configurator.csproj">
+      <Project>{999c5e99-e005-4049-b4d8-51b9afd5b914}</Project>
+      <Name>PylonBridge_Configurator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Core\PylonBridge_Core.csproj">
+      <Project>{9bdd87b1-1579-4350-89a3-7ee51059d2bd}</Project>
+      <Name>PylonBridge_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_DataAccess\PylonBridge_DataAccess.csproj">
+      <Project>{f75c1349-6916-4e9c-8676-d5940448ab79}</Project>
+      <Name>PylonBridge_DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_DTOs\PylonBridge_DTOs.csproj">
+      <Project>{7664bef6-7613-4d2d-a39d-846ebedd022e}</Project>
+      <Name>PylonBridge_DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Helpers\PylonBridge_Helpers.csproj">
+      <Project>{05d6843e-d841-4851-a4a5-e851b0d3f509}</Project>
+      <Name>PylonBridge_Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_MainLogic\PylonBridge_MainLogic.csproj">
+      <Project>{d61116a0-0716-4baf-be67-a1d99a39a6fd}</Project>
+      <Name>PylonBridge_MainLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Models\PylonBridge_Models.csproj">
+      <Project>{54F7C598-6674-4664-B979-AC5FCEE525F0}</Project>
+      <Name>PylonBridge_Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Recources\PylonBridge_Resources.csproj">
+      <Project>{a45188a8-9639-4db9-b16c-9804540993de}</Project>
+      <Name>PylonBridge_Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Scheduler\PylonBridge_Scheduler.csproj">
+      <Project>{c7b3c7fc-ca01-4387-954e-0dd2e592624d}</Project>
+      <Name>PylonBridge_Scheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_WebApi\PylonBridge_WebApi.csproj">
+      <Project>{296b72d1-b163-4a11-b207-2f7d19b1623a}</Project>
+      <Name>PylonBridge_WebApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExternalFiles\ConfigTest.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

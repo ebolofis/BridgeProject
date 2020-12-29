@@ -1,0 +1,6 @@
+ {
+    "Username": "K29Client",
+    "Password": "xmC4CYdTJJQtCrPtbVsNnYGGFNJyjUkDAFrMTTzrn1E=",     //!K29Cli@nt
+    "Notes": "Login model for SmartIn K29 project",
+    "AccessTo": [ "SmartInElockController" ]
+  }

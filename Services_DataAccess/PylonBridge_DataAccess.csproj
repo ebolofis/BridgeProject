@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F75C1349-6916-4E9C-8676-D5940448AB79}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hit.Services.DataAccess</RootNamespace>
+    <AssemblyName>HitServicesDA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.SimpleCRUD, Version=1.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.SimpleCRUD.1.13.0\lib\net45\Dapper.SimpleCRUD.dll</HintPath>
+    </Reference>
+    <Reference Include="HitServicesM">
+      <HintPath>..\HitServices_Core\bin\Debug\HitServicesM.dll</HintPath>
+    </Reference>
+    <Reference Include="HitServices_Helpers, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HitServices_Helpers\bin\Debug\HitServices_Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAOs\GenericDAO.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\BranchDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\CurrencyDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\GetDocsDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\HitToPylonDocsDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\KundenDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\MCDataDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\PaymentMethodsDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\PostDataToPylonDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\PylonCustomerDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\ServicesDT.cs" />
+    <Compile Include="DT\ProtelToPylonMappings\VatDT.cs" />
+    <Compile Include="DT\SQL\CreateTable.cs" />
+    <Compile Include="DT\SQL\HitServicesDT.cs" />
+    <Compile Include="DT\SQL\RunSQLScriptsDT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HitServices_Core\PylonBridge_Core.csproj">
+      <Project>{9bdd87b1-1579-4350-89a3-7ee51059d2bd}</Project>
+      <Name>PylonBridge_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_DTOs\PylonBridge_DTOs.csproj">
+      <Project>{7664bef6-7613-4d2d-a39d-846ebedd022e}</Project>
+      <Name>PylonBridge_DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Helpers\PylonBridge_Helpers.csproj">
+      <Project>{05d6843e-d841-4851-a4a5-e851b0d3f509}</Project>
+      <Name>PylonBridge_Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HitServices_Recources\PylonBridge_Resources.csproj">
+      <Project>{a45188a8-9639-4db9-b16c-9804540993de}</Project>
+      <Name>PylonBridge_Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

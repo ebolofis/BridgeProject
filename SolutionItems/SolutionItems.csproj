@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70D890B8-A3FA-4703-AB27-C42BD4F77F82}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SolutionItems</RootNamespace>
+    <AssemblyName>SolutionItems</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Implementations\Generic\ReadFromCsv\Settings\ReadFromCsv" />
+    <None Include="Implementations\Generic\RunScript\AppScripts\RunScript_Example" />
+    <None Include="Implementations\Generic\RunScript\Settings\RunScript_Example" />
+    <None Include="Implementations\Generic\SaveToTable\AppScripts\SaveToTable_Example" />
+    <None Include="Implementations\Generic\SaveToTable\Settings\SaveToTable_Example" />
+    <None Include="Implementations\Gorissia\GetProfiles\Files\corissiaCleverApi.pdf" />
+    <None Include="Implementations\Gorissia\GetProfiles\Files\Test\log_customers.csv" />
+    <None Include="Implementations\Gorissia\GetProfiles\Settings\CorissiaGetProfiles" />
+    <None Include="Implementations\Gorissia\ProtelFieldsForAPI.docx" />
+    <None Include="Implementations\Iberostar\SendReservations\Settings\SendReservations" />
+    <None Include="Implementations\Miragio\FuelsImport\RET-PSD-2006-07 v.2 %28StationManager Export%29.pdf" />
+    <None Include="Implementations\Miragio\FuelsImport\SMexp-20180517-1720.exp" />
+    <None Include="Implementations\Mitsis\Invoices\AppScripts\Mitsis_Invoices" />
+    <None Include="Implementations\Mitsis\Invoices\AppScripts\Mitsis_Invoices_Pre" />
+    <None Include="Implementations\Mitsis\Invoices\Settings\MitsisInvoices" />
+    <None Include="Implementations\Mitsis\Reservations\AppScripts\Mitsis_Reservations" />
+    <None Include="Implementations\Mitsis\Reservations\AppScripts\Mitsis_Reservations_Pre" />
+    <None Include="Implementations\Mitsis\Reservations\Settings\MitsisReservations" />
+    <None Include="Implementations\Protel Generic\Availibilities\Files\ProtelAvailability" />
+    <None Include="Implementations\Protel Generic\Availibilities\Settings\ProtelAvailability" />
+    <None Include="Implementations\Protel Generic\RateCodes\Files\ProtelRateCodes" />
+    <None Include="Implementations\Protel Generic\RateCodes\Settings\ProtelRateCodes" />
+    <None Include="Implementations\Singular\FuelExports\RET-PSD-2006-07 v.2 %28StationManager Export%29.pdf" />
+    <None Include="Implementations\Singular\FuelExports\Settings\MiragioFuelExports" />
+    <None Include="Implementations\Singular\FuelExports\SMexp-20180517-1720-ForTest.exp" />
+    <None Include="Implementations\Singular\FuelExports\SMexp-20180517-1720.exp" />
+    <None Include="Implementations\SmartIn\ELock\Files\DoorUnlocker.apk" />
+    <None Include="Implementations\WaterPark\OnLineRegistration\Settings\WaterParkOnLineRegistration" />
+    <None Include="Instructions.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Implementations\Gorissia\GetProfiles\Files\Hooks\hit_Corissia_AddProfile.xml" />
+    <Content Include="Implementations\Gorissia\GetProfiles\Files\Test\log_customers.sql" />
+    <Content Include="Implementations\Gorissia\GetProfiles\ReadMe.txt" />
+    <Content Include="Implementations\Iberostar\SendReservations\Files\2_MARINE.XML" />
+    <Content Include="Implementations\Mitsis\Invoices\ReadMe.txt" />
+    <Content Include="Implementations\Mitsis\Reservations\ReadMe.txt" />
+    <Content Include="Implementations\SmartIn\ELock\Files\DoorUnlocker.zip.txt" />
+    <Content Include="Implementations\SmartIn\ELock\Files\Hooks\hit_CheckIn_SmartIn_System.xml" />
+    <Content Include="Implementations\SmartIn\ELock\Files\Hooks\hit_CheckOut_SmartIn_System.xml" />
+    <Content Include="Implementations\SmartIn\ELock\Files\Hooks\hit_ReservationChange_SmartIn_System.xml" />
+    <Content Include="Implementations\SmartIn\ELock\Files\Hooks\hit_VoidCheckIn_SmartIn_System.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementations\Iberostar\SendReservations\AppScripts\" />
+    <Folder Include="Implementations\Miragio\FuelsImport\TestFolder\" />
+    <Folder Include="Implementations\Protel Generic\Availibilities\AppScripts\" />
+    <Folder Include="Implementations\Protel Generic\RateCodes\AppScripts\" />
+    <Folder Include="Implementations\Singular\FuelExports\TestFolder\" />
+    <Folder Include="Implementations\SmartIn\ELock\Settings\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

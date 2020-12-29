@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Hit.Services.DataAccess.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProtelDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HpkWzJOvE+nTPeXiEK5WD24WLAqsUb8LziXzwbDLRfWcV8bnPKJH8k6Fxusy4dIG6IdGcL+UdZvXHzirOEH21CX8x9M19F9+cm8nx3MdrnPvt2NvW64JwlRJnmxtt7l2vFqI4cCXKMoIEzLIwmx8VASd/16ma46ff/NtLe2j6nHJ1cQx2+ba4aD1yE/UD0zKnbSjb0Li/0fJHjMuChMiUSU2IxC++4ewqZP+AzxvV2Y=</Value>
+    </Setting>
+    <Setting Name="SmartInElockDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HpkWzJOvE+nTPeXiEK5WD24WLAqsUb8LziXzwbDLRfWcV8bnPKJH8k6Fxusy4dIG6IdGcL+UdZvXHzirOEH21DsmEo4lPiJqejBlUSK4JMhpH+x+L+DkgJADb3KPXYGSaFHlOmqO4jMoTE0I8870D84vGzN6pr8QyIKoub3V8H+spuvv71slzfQMLdQ0R8FmCGMbbnNW2V4OsZVtoQjlVg==</Value>
+    </Setting>
+    <Setting Name="ProtelUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">proteluser</Value>
+    </Setting>
+    <Setting Name="Mpehotel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="HitPosDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-</Value>
+    </Setting>
+    <Setting Name="WebPosDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HdgOyzBOEmhCugwCpm31D8P5wp7pbN02oLn+NZTWL5BxF6e01ikUy2+88+ID3PtTQcXkLNz+59VusMOioS42kcDqivlVCBt2xhi85DRRejy0Rsx4MpDBmx1iESm1PgV1+O6TZhRzuCaQChLGOlHOUkEmz3PeW8FkkquAgUZ4cGNM++r7f5WXuc2V4X+idM0DHKIFUiSP75Uom/q7BAK2GtgDTTnTjywlPQGtRYbltTHOG8uaFzNORqnFM5zuE51o4+lw2ISAo+FN+4hjZuGC6TJiigLjZ0sWPIByH92v4eg=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
